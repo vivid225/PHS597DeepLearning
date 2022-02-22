@@ -25,8 +25,8 @@ for ( i in 1:10000){
   v = X %*% b
   # fit spline model
   spfit <- smooth.spline(x=v, y=y)
-  y_hat <- g <- predict(spfit, v, deriv=0)$y
-  d1 <- gprime <- predict(spfit, v, deriv=1)$y
+  g <- predict(spfit, v, deriv=0)$y
+  gprime <- predict(spfit, v, deriv=1)$y
   
   # Update weight
   w <- diag(as.vector(gprime)/sum(gprime^2))
