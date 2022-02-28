@@ -115,7 +115,7 @@ y_nmf <- w %*% h
 
 ### eQTL analysis
 
-To conduct the eQTL analysis, I filtered the data within 500000 downstream and upstream of gene start and end sites. I regressed each gene expression (SNP) on each genotype. The Benjamini-Hochberg method was applied 
+To conduct the eQTL analysis, I filtered the data within 500000 downstream and upstream of gene start and end sites. I regressed each gene expression (SNP) on each genotype. The Benjamini-Hochberg method was applied for multiple testing adjustment.
 
 ```{r eval=FALSE, include=TRUE}
 resdf <- c()
